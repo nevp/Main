@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.nevp.herbarium.application.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.nevp.herbarium.application.Perspective"
+            id="HerbRCPClient.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="TestTab"
+            allowMultiple="true"
+            icon="icons/sample2.gif"
+            class="org.nevp.herbarium.views.View"
+            id="HerbRCPClient.view">
+      </view>
+      <view
+            name="Mailboxes"
+            allowMultiple="true"
+            icon="icons/sample3.gif"
+            class="org.nevp.herbarium.views.NavigationView"
+            id="HerbRCPClient.navigationView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Mail"
+            id="HerbRCPClient.category">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="HerbRCPClient.category"
+            id="HerbRCPClient.open">
+      </command>
+      <command
+            name="Open Message Dialog"
+            description="Open a message dialog"
+            categoryId="HerbRCPClient.category"
+            id="HerbRCPClient.openMessage">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="HerbRCPClient.open"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+2">
+      </key>
+      <key
+            commandId="HerbRCPClient.openMessage"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+3">
+      </key>
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+X">
+      </key>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="HerbRCPClient.application"
+            name="RCPClient Product">
+         <property
+               name="aboutText"
+               value="RCP Mail template created by PDE">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/sample2.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="product_lg.gif">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

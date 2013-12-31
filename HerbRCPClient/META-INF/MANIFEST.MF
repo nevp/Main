@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HerbRCPClient
+Bundle-SymbolicName: HerbRCPClient; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.nevp.herbarium.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: lib/jaxen-1.1.1.jar,
+ lib/jdom-2.0.3.jar,
+ lib/org.eclipse.nebula.widgets.calendarcombo-1.0-NIGHTLY.jar,
+ lib/org.eclipse.nebula.widgets.gallery_0.5.3.201301250946.jar,
+ .
+
