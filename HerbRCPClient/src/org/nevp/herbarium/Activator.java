@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
 
-	// The plug-in ID
+	// The plug-in IDxxx
 	public static final String PLUGIN_ID = "HerbRCPClient"; //$NON-NLS-1$
 
 	// The shared instance
